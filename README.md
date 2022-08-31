@@ -43,11 +43,8 @@ $$\pmb{x} = \pmb{A}\pmb{s}+\pmb{n}$$
 #### 1.求信号的自相关矩阵
 我们拿到了信号 $\pmb{x}$ ，先求其自相关矩阵
 $$\pmb{R}_x = E[\pmb{x}\pmb{x}^\mathrm{H}]$$
-带入可得
-$$\pmb{R}_x = E[(\pmb{A}\pmb{s}
-      + \pmb{n})
-      (\pmb{s}^\mathrm{T}\pmb{A}^\mathrm{T}
-      + \pmb{n}^\mathrm{T})]$$
+代入可得
+$$\pmb{R}_x = E[(\pmb{A}\pmb{s} + \pmb{n})(\pmb{s}^\mathrm{T}\pmb{A}^\mathrm{T} + \pmb{n}^\mathrm{T})]$$
 展开得
 $$\pmb{R}_x = E[\pmb{A}\pmb{s}\pmb{s}^\mathrm{T}\pmb{A}^\mathrm{T}]
       + E[\pmb{A}\pmb{s}\pmb{n}^\mathrm{T}]
