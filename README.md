@@ -22,7 +22,20 @@ $$R = \frac{1}{T} \sum_t \pmb{X}[t]\pmb{X}[t]^\mathrm{H}$$
 
 ## 估计方法:MUSIC (MUltiple SIgnal Classification)
 ### 信号建模
-首先，我们认为信号有 $p$ 个频率分量，而我们测出 $M$ 个测量值，那么定义
+首先，我们认为信号有 $p$ 个频率分量，定义信号幅度矢量为
+$$\pmb{s} = [s_1,s_2,...,s_p]^\mathrm{T}$$
+而我们测出 $M$ 个测量值，那么定义旋转矢量（Steering Vector）
 $$\pmb{a}(\omega) = [1,e^{j\omega},e^{j2\omega},...,e^{j(M-1)\omega}]^\mathrm{T}$$
+他表示 $M$ 个等相位差测量装置的相位分布情况，而 $\omega$ 即为相邻接收装置的相位差；
+现假设第1个接收装置接收到的信号没有相位差，那么他接收到的信号应为 $x_1 = [1,1,...,1]\pmb{s}^\mathrm{T}$ ，自然也就知道了第 $m$ 个接收装置接收到的信号为
+$$x_m = e^{j(m-1)\omega}x_1$$
+设接收信号矢量
+$$\pmb{x}=[x_1,x_2,...,x_M]^\mathrm{H}$$
+把他展开，可以提取出 $\pmb{a}(\omega)$ 得到
+$$\pmb{x} = \pmb{A}\pmb{s}$$
+其中
+$$\pmb{A} = [\pmb{a}(\omega_1),\pmb{a}(\omega_2),...,\pmb{a}({\omega}_p)]$$
+除此之外，信号在传输过程中会出现噪声，我们设噪声为 $\pmb{n}$ ，它的各个分量都是白噪声且互相正交；从而得到接收信号最终的建模为
+$$\pmb{x} = \pmb{A}\pmb{s}+\pmb{n}$$
 
 ### Fourier变换估计方法
