@@ -28,9 +28,7 @@ $$
 \Sigma = \frac{1}{T-1} \sum_t (\pmb{X}[t]-\pmb{\mu})(\pmb{X}[t]-\pmb{\mu})^\mathrm{H}
 $$
 自相关矩阵定义为
-$$
-R = \frac{1}{T} \sum_t \pmb{X}[t]\pmb{X}[t]^\mathrm{H}
-$$
+$$R = \frac{1}{T} \sum_t \pmb{X}[t]\pmb{X}[t]^\mathrm{H}$$
 
 ## 估计方法:MUSIC (MUltiple SIgnal Classification)
 ### 信号建模
