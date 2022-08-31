@@ -8,7 +8,7 @@
 对于信号 $\pmb{X}$ ，均值定义为
 $$ \pmb{\mu} = E[\pmb{X}] $$
 自协方差矩阵定义为
-$$ \Sigma = E[(\pmb{X}-\pmb{\mu})(\pmb{X}-\pmb{\mu})^\mathrm{H}] $$
+ $$ \Sigma = E[(\pmb{X}-\pmb{\mu})(\pmb{X}-\pmb{\mu})^\mathrm{H}] $$
 自相关矩阵定义为
 $$ R = E[\pmb{X}\pmb{X}^\mathrm{H}] $$
 
