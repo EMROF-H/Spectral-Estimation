@@ -46,10 +46,7 @@ $$\pmb{R}_x = E[\pmb{x}\pmb{x}^\mathrm{H}]$$
 代入可得
 $$\pmb{R}_x = E[(\pmb{A}\pmb{s} + \pmb{n})(\pmb{s}^\mathrm{T}\pmb{A}^\mathrm{T} + \pmb{n}^\mathrm{T})]$$
 展开得
-$$\pmb{R}_x = E[\pmb{A}\pmb{s}\pmb{s}^\mathrm{T}\pmb{A}^\mathrm{T}]
-      + E[\pmb{A}\pmb{s}\pmb{n}^\mathrm{T}]
-      + E[\pmb{n}\pmb{s}^\mathrm{T}\pmb{A}^\mathrm{T}]
-      + E[\pmb{n}\pmb{n}^\mathrm{T}]$$
+$$\pmb{R}_x = E[\pmb{A}\pmb{s}\pmb{s}^\mathrm{T}\pmb{A}^\mathrm{T}] + E[\pmb{A}\pmb{s}\pmb{n}^\mathrm{T}] + E[\pmb{n}\pmb{s}^\mathrm{T}\pmb{A}^\mathrm{T}] + E[\pmb{n}\pmb{n}^\mathrm{T}]$$
 由于 $\pmb{n}$ 的性质，得 $E[\pmb{A}\pmb{s}\pmb{n}^\mathrm{T}] = E[\pmb{n}\pmb{s}^\mathrm{T}\pmb{A}^\mathrm{T}] = 0$ ，所以我们有
 $$\pmb{R}_x = \pmb{A}(E[\pmb{s}\pmb{s}^\mathrm{T}])\pmb{A}^\mathrm{T} + E[\pmb{n}\pmb{n}^\mathrm{T}]$$
 即
