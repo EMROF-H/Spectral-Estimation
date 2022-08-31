@@ -55,7 +55,7 @@ $$\pmb{R}_x = \pmb{A}\pmb{R}_s\pmb{A}^\mathrm{T} + \pmb{R}_n$$
 $$\pmb{R}_x = \pmb{A}\pmb{R}_s\pmb{A}^\mathrm{T} + \sigma^2\pmb{I}$$
 其中 $\pmb{R}_x$ 是 $M$ 阶方阵，而 $\pmb{R}_s$ 是 $p$ 阶方阵。
 
-### 2.特征空间
+#### 2.特征空间
 根据自相关矩阵的性质，接收信号 $\pmb{x}$ 的自相关矩阵 $\pmb{R}_x$ 一定是一个厄米矩阵，所以可以进行特征值分解且特征值一定为实数；将分解后得特征值按照从大到小得顺序排列，得到特征向量组 ${\pmb{v}_1,\pmb{v}_2,...,\pmb{v}_M}$ ，定义前 $p$ 个特征向量组 $\pmb{U}_s = [\pmb{v}_1,\pmb{v}_2,...,\pmb{v}_p]$ 即为信号子空间，而后 $M-p$ 个特征向量组 $\pmb{U}_n = [\pmb{v}_p,\pmb{v}_(p+1),...,\pmb{v}_M]$ 即为噪声子空间，且与信号子空间正交；
 由此，我们可以定义信号矢量 $\pmb{e}$ 与噪声子空间的平方范数
 $$d^2 = {\Vert{\pmb{U}_n^\mathrm{H}\pmb{e}}\Vert}^2 = \pmb{e}^\mathrm{H}\pmb{U}_n\pmb{U}_n^\mathrm{H}\pmb{e} = \sum_{i=p+1}^{M}{|\pmb{e}^\mathrm{H}\pmb{v}_i|}^2$$
