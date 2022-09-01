@@ -25,8 +25,9 @@ sourceVectorSignal = SineVectorSample(AmplitudeVector,FrequencyVector,PhaseVecto
 noiseVectorSignal = RandomVectorSample('Normal',struct('mean',0,'variance',NoiseVariance),M,SamplePoints);
 receiveVectorSignal = SteeringMatrix * sourceVectorSignal + noiseVectorSignal;
 
-%
-
+%% 
+autocorrelationMatrix = AutocorrelationMatrix(receiveVectorSignal);
+[eigenvectorMatrix,eigenvalueMatrix] = EigenvalueDecomposition(autocorrelationMatrix);
 
 % size = 128;
 
