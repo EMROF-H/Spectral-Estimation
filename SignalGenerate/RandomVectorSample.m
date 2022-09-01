@@ -1,3 +1,21 @@
+%名字：随机矢量信号样本生成
+%功能：生成一个各个维度相互独立同分布的随机矢量样本
+%参数：
+%   type:随机分布类型
+%   parameters:随机分布参数
+%   dimension:随机矢量维度
+%   size:采样点数量，即样本容量
+%返回：随机过程样本结构体
+
+function randomVectorSignal = RandomVectorSample(type,parameters,dimension,size)
+    randomVectorSignal = zeros(dimension,size);
+    for row = 1:dimension
+        randomVectorSignal(row,:) = RandomSample(type,parameters,size)
+    end
+end
+
+%——————————————————————————————————————————————————————————————
+
 %名字：随机过程采样函数
 %功能：用于随机过程的采样
 %参数：
@@ -6,7 +24,7 @@
 %   size:采样点数量，即样本容量
 %返回：随机过程样本结构体
 
-function randomSignal = RandomGenerate(type,parameters,size)
+function randomSignal = RandomSample(type,parameters,size)
     if      (strcmp(type,'Normal'))
         randomSignal = NormalRandom(parameters,size);
     elseif  (strcmp(type,'ComplexNormal'))
@@ -17,8 +35,6 @@ function randomSignal = RandomGenerate(type,parameters,size)
         randomSignal = UniformRandom(parameters,size);
     end
 end
-
-%——————————————————————————————————————————————————————————————
 
 %名字：高斯随机过程采样
 %功能：用于高斯随机过程采样
