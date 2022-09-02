@@ -23,7 +23,7 @@ SignalPower = sum(AmplitudeVector.^2/2); % 信号功率
 NoisePower = SignalPower / SignalToNoiseRatio; % 噪声功率
 NoiseVariance = NoisePower; % 噪声方差
 SampleTime = SamplePoints / SampleFrequency; % 采样时长
-ArgfrequencyVector = tau * AnalogFrequencyVector / SampleFrequency; % 采样频率
+ArgfrequencyVector = tau * AnalogFrequencyVector / SampleFrequency; % 数字角频率
 psdindependentSequence = tau * (0:1:(SamplePoints - 1))' / SamplePoints; % 功率谱密度自变量
 psddisplayindependentSequence = ((0:1:(SamplePoints - 1))' / SamplePoints) * SampleFrequency; % 功率谱密度自变量
 
